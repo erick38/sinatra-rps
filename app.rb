@@ -11,9 +11,9 @@ computer_move = moves.sample
 if computer_move == 'rock'
   outcome_t='tied'
 elsif computer_move == 'paper'
-  outcome_t='lose'
+  outcome_t='lost'
 else computer_move == 'scissors'
-  outcome_t='win'
+  outcome_t='won'
 end
 @outcome_c = "They played #{computer_move}"
 @outcome = "we #{outcome_t}"
@@ -28,9 +28,9 @@ get("/paper") do
   if computer_move == 'paper'
     outcome_t='tied'
   elsif computer_move == 'rock'
-    outcome_t='win'
+    outcome_t='won'
   else computer_move == 'scissors'
-    outcome_t='lose'
+    outcome_t='lost'
   end
   @outcome_c = "They played #{computer_move}"
   @outcome = "we #{outcome_t}"
@@ -46,9 +46,9 @@ get("/scissors") do
   if computer_move == 'scissors'
     outcome_t='tied'
   elsif computer_move == 'rock'
-    outcome_t='lose'
+    outcome_t='lost'
   else computer_move == 'paper'
-    outcome_t='win'
+    outcome_t='won'
   end
   @outcome_c = "They played #{computer_move}"
   @outcome = "we #{outcome_t}"
